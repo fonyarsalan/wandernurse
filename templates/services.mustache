@@ -1,0 +1,111 @@
+<section id="services">
+  <div class="container">
+    <div class="services content">
+      <h1 class="heading">{{services.heading}}</h1>
+      <p class="about-description">
+        {{services.heading_description}}
+      </p>
+    </div>
+    <div
+      id="testimonialCarousel"
+      class="carousel slide"
+      data-bs-ride="false"
+    >
+      <div class="row row1">
+        <div class="col-md-16">
+          <!-- Corrected Carousel Indicators -->
+          <ol class="carousel-indicators">
+            <li
+              data-bs-target="#testimonialCarousel"
+              data-bs-slide-to="0"
+              class="active"
+            ></li>
+            <li data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></li>
+          </ol>
+
+          <!-- Carousel Inner -->
+          <div class="carousel-inner-services">
+
+            <!-- Testimonial Group 1 -->
+            <div class="carousel-item active">
+              <div class="row">
+                <!-- Testimonial 1 -->
+                {{#services.items}}
+
+                <div class="col-md-4 testii">
+                  <div class="testimonial text-center">
+                    <img
+                      src="{{image}}"
+                      class="service-img"
+                      alt="User Image"
+                    />
+                    <p class="service-name">{{title}}</p>
+                    <p class="testimonial-text">
+                      {{description}}
+                    </p>
+                  </div>
+                </div>
+                {{/services.items}}
+
+
+
+              </div>
+            </div>
+
+            <!-- Testimonial Group 2 -->
+            <div class="carousel-item">
+              <div class="row">
+                <!-- Testimonial 4 -->
+                <div class="col-md-4 testii">
+                  <div class="testimonial text-center">
+                    <img
+                      src="/moodle/theme/wandernurse/pix/rectangle.png"
+                      class="service-img"
+                      alt="service-img"
+                    />
+                    <p class="service-name">Travel Nursing</p>
+                    <p class="testimonial-text">
+                      "Amazing experience overall! Highly recommend."
+                    </p>
+                  </div>
+                </div>
+                <!-- Testimonial 5 -->
+                <div class="col-md-4 testii">
+                  <div class="testimonial text-center">
+                    <img
+                      src="/moodle/theme/wandernurse/pix/rectangle.png"
+                      class="service-img"
+                      alt="service-img"
+                    />
+                    <p class="service-name">Travel Nursing</p>
+                    <p class="testimonial-text">
+                      "Their team provided invaluable support and expertise."
+                    </p>
+                  </div>
+                </div>
+                <!-- Testimonial 6 -->
+                <div class="col-md-4 testii">
+                  <div class="testimonial text-center">
+                    <img
+                      src="/moodle/theme/wandernurse/pix/rectangle.png"
+                      class="service-img"
+                      alt="service-img"
+                    />
+                    <p class="service-name">Travel Nursing</p>
+                    <p class="testimonial-text">
+                      "Top-notch service! I will definitely use them again."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-button">  <button class="services-button">discover you perfect job</button></div>
+  
+  </div>
+</section>
+
