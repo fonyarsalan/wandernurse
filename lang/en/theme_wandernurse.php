@@ -205,3 +205,4 @@ $string['subscriptiondescriptiondesc'] = 'Enter the description for the Subscrip
 
 $string['brandcolor'] = 'Brand Color';
 $string['brandcolordesc'] = 'Select the brand color for your theme.';
+$string['thisisaccahnge'] = 'change';
