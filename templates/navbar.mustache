@@ -1,88 +1,102 @@
-{{!
-    This file is part of Moodle - http://moodle.org/
+<nav class="navbar_my navbar fixed-top_my fixed-top relative   navbar-expand" aria-label="Site navigation">
+        <div class="container-fluid">
+             <div id = "navbar-social "class="navbar-social d-flex align-items-center">
+            <a href="#" class="nav-link nav-link1 text-black"><i class="fa fa-linkedin"></i></a>
+            <a href="#" class="nav-link nav-link1 text-black"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="nav-link nav-link1 text-black"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="nav-link nav-link1 text-black"><i class="fa fa-facebook"></i></a>
+        </div>
 
-    Moodle is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    Moodle is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
-}}
-{{!
-
-    @template theme_boost/navbar
-
-    This template renders the top navbar.
-
-    Example context (json):
-    {
-        "output": {
-            "should_display_navbar_logo": true,
-            "get_compact_logo_url": "http://placekitten.com/50/50",
-            "custom_menu": "<li>..</li>",
-            "page_heading_menu": "<li>..</li>",
-            "search_box": "<div><input type='text'></div>",
-            "navbar_plugin_output": "<div class='dropdown'>Messaging</div>",
-            "user_menu": "<div class='dropdown'>John Doe</div>"
-        },
-        "config": {
-            "wwwroot": "#",
-            "homeurl": "/my/"
-        },
-        "sitename": "Moodle Site",
-        "mobileprimarynav": [
-            {
-                "text": "Dashboard",
-                "url": "/my",
-                "isactive": true
-            },
-            {
-                "text": "Site home",
-                "url": "/",
-                "isactive": false
-            },
-            {
-                "text": "My courses",
-                "url": "/course",
-                "isactive": false
-            }
-        ]
-    }
-}}
-<nav class="navbar fixed-top navbar-light bg-white navbar-expand" aria-label="{{#str}}sitemenubar, admin{{/str}}">
-    <div class="container-fluid">
-        <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
-            <span class="navbar-toggler-icon"></span>
-            <span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
-        </button>
-
-        <a href="{{{ config.homeurl }}}" class="navbar-brand d-none d-md-flex align-items-center m-0 mr-4 p-0 aabtn">
-
-            {{# output.should_display_navbar_logo }}
-                <img src="{{output.get_compact_logo_url}}" class="logo mr-1" alt="{{sitename}}">
-            {{/ output.should_display_navbar_logo }}
-            {{^ output.should_display_navbar_logo }}
-                {{{ sitename }}}
-            {{/ output.should_display_navbar_logo }}
-        </a>
-        {{#primarymoremenu}}
-            <div class="primary-navigation">
-                {{> core/moremenu}}
+        <div class="main-logo">
+            <img src="/moodle/theme/wandernurse/pix/mask_logo.png" alt="">
+        </div>
+            <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary" data-disabled-toggle="undefined" data-restore-tooltip-on-blur="true">
+                <span class="navbar-toggler-icon"></span>
+                <span class="sr-only">Side panel</span>
+            </button>
+            {{#primarynav}}
+            <div class="primary-navigation_my primary-navigation">
+                <nav class="moremenu moremenu-my navigation observed">
+                    <ul id="moremenu-66e345418224b-navbar-nav" role="menubar" class="nav more-nav navbar-nav">
+                                <li data-key="home" class="nav-item" role="none" data-forceintomoremenu="false">
+                                            <a id="menuitem" role="menuitem" class="nav-link nav-link1 active " href="http://216.128.135.50/moodle/?redirect=0" aria-current="true">
+                                                Home
+                                            </a>
+                                </li>
+                                <li data-key="myhome" class="nav-item" role="none" data-forceintomoremenu="false">
+                                            <a id="menuitem" role="menuitem" class="nav-link nav-link1  " href="http://216.128.135.50/moodle/my/" tabindex="-1">
+                                                Dashboard
+                                            </a>
+                                </li>
+                                <li data-key="mycourses" class="nav-item" role="none" data-forceintomoremenu="false">
+                                            <a id="menuitem" role="menuitem" class="nav-link nav-link1  " href="http://216.128.135.50/moodle/my/courses.php" tabindex="-1">
+                                                My courses
+                                            </a>
+                                </li>
+                                <li data-key="siteadminnode" class="nav-item" role="none" data-forceintomoremenu="false">
+                                            <a id="menuitem" role="menuitem" class="nav-link nav-link1  " href="http://216.128.135.50/moodle/admin/search.php" tabindex="-1">
+                                                Site administration
+                                            </a>
+                                </li>
+                        <li role="none" class="nav-item dropdown dropdownmoremenu d-none" data-region="morebutton">
+                            <a class="dropdown-toggle nav-link nav-link1 " href="#" id="moremenu-dropdown-66e345418224b   menuitem " role="menuitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                                More
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" data-region="moredropdown" aria-labelledby="moremenu-dropdown-66e345418224b" role="menu">
+                            </ul>
+                        </li>
+                                                                <li data-key="editsettings" class="nav-item" role="none" data-forceintomoremenu="false">
+                                                <a  id="menuitem "      role="menuitem" class="nav-link nav-link1  " href="http://216.128.135.50/moodle/admin/settings.php?section=frontpagesettings" tabindex="-1">
+                                                    Settings
+                                                </a>
+                                    </li>
+                                    <li data-key="participants" class="nav-item" role="none" data-forceintomoremenu="false">
+                                                <a id="  menuitem "   role="menuitem" class="nav-link nav-link1  " href="http://216.128.135.50/moodle/user/index.php?id=1" tabindex="-1">
+                                                    Participants
+                                                </a>
+                                    </li>
+                                    <li data-key="coursereports" class="nav-item" role="none" data-forceintomoremenu="false">
+                                                <a id="  menuitem "   role="menuitem" class="nav-link nav-link1  " href="http://216.128.135.50/moodle/report/view.php?courseid=1" tabindex="-1">
+                                                    Reports
+                                                </a>
+                                    </li>
+                                    <li data-key="questionbank" class="nav-item" role="none" data-forceintomoremenu="false">
+                                                <a id="  menuitem "   role="menuitem" class="nav-link nav-link1  " href="http://216.128.135.50/moodle/question/edit.php?courseid=1" tabindex="-1">
+                                                    Question bank
+                                                </a>
+                                    </li>
+                                    
+                                    
+                                    
+                                    
+                        <li role="none" class="nav-item dropdown dropdownmoremenu" data-region="morebutton">
+                            <a class="dropdown-toggle nav-link nav-link1 " href="#" id="moremenu-dropdown-66e47754b4390" role="menuitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                                More
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-left" data-region="moredropdown" aria-labelledby="moremenu-dropdown-66e47754b4390" role="menu">
+                            <li data-key="contentbank" class="nav-item" role="none" data-forceintomoremenu="true">
+                                                <a role="menuitem" class="dropdown-item" href="http://216.128.135.50/moodle/contentbank/index.php?contextid=1" tabindex="-1">
+                                                    Content bank
+                                                </a>
+                                    </li><li data-key="filtermanagement" class="nav-item" role="none" data-forceintomoremenu="true">
+                                                <a role="menuitem" class="dropdown-item" href="http://216.128.135.50/moodle/filter/manage.php?contextid=2" tabindex="-1">
+                                                    Filters
+                                                </a>
+                                    </li><li data-key="0" class="nav-item" role="none" data-forceintomoremenu="true">
+                                                <a role="menuitem" class="dropdown-item" href="http://216.128.135.50/moodle/course/view.php?id=1&amp;sesskey=sL86OlMEGi&amp;edit=on" tabindex="-1">
+                                                    Turn editing on
+                                                </a>
+                                    </li><li data-key="coursereuse" class="nav-item" role="none" data-forceintomoremenu="true">
+                                                <a role="menuitem" class="dropdown-item" href="http://216.128.135.50/moodle/backup/view.php?id=1" tabindex="-1">
+                                                    Course reuse
+                                                </a>
+                                    </li></ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        {{/primarymoremenu}}
-
-        <ul class="navbar-nav d-none d-md-flex my-1 px-1">
-            <!-- page_heading_menu -->
-            {{{ output.page_heading_menu }}}
-        </ul>
-
-        <div id="usernavigation" class="navbar-nav ml-auto">
+       {{/primarynav}}
+           <div id="usernavigation" class="navbar-nav ml-auto">
             {{# output.search_box }}
                 {{{ output.search_box }}}
                 <div class="divider border-left h-75 align-self-center mx-1"></div>
@@ -98,8 +112,67 @@
                 {{/usermenu}}
             </div>
             {{{ output.edit_switch }}}
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-{{> theme_boost/primary-drawer-mobile }}
+<!-- Bootstrap 4 CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+<!-- Bootstrap 4 JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the navbar and primary navigation elements
+        var navbar = document.querySelector('.navbar_my');
+        var primaryNav = document.querySelector('.primary-navigation_my');
+        var navLinks = document.querySelectorAll('.nav-link1');
+        var mainLogo = document.querySelector('.main-logo');
+        
+
+        // Function to handle the scroll event
+        function handleScroll() {
+            if (window.scrollY > 50) {
+                // Remove classes and apply styles when scrolling down
+                navbar.style.backgroundColor = 'white';
+                navbar.style.transition = 'background-color 0.3s ease-in-out';
+                navbar.style.maxWidth = '100vw';  // Ensures the navbar takes full viewport width
+                navbar.style.marginTop='0';
+                if (mainLogo) {
+                    console.log('ma ter piyo');
+    mainLogo.style.display = 'none';
+   
+} else {
+    console.error('Element with class "main-logo" not found.');
+}
+                if (primaryNav) {
+                    primaryNav.classList.remove('primary-navigation_my');
+                }
+                navLinks.forEach(function (link) {
+                    link.classList.remove('nav-link1');
+                });
+            } else {
+                // Revert styles and add classes back when scrolling up
+                navbar.style.backgroundColor = 'transparent';  // Reset to transparent
+                navbar.style.maxWidth = '85%';  // Reset width to default
+                mainLogo.style.display='block';
+                navbar.style.marginTop='30px';
+                if (primaryNav) {
+                    primaryNav.classList.add('primary-navigation_my');
+                }
+                navLinks.forEach(function (link) {
+                    link.classList.add('nav-link1');
+                });
+            }
+        }
+
+        // Attach the scroll event listener
+        window.addEventListener('scroll', handleScroll);
+    });
+</script>
