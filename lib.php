@@ -43,10 +43,10 @@ function theme_wandernurse_pluginfile($course, $cm, $context, $filearea, $args, 
         $theme = theme_config::load('wandernurse'); 
     } 
     if ($context->contextlevel == CONTEXT_SYSTEM) { 
+        $number_of_services = get_config('theme_wandernurse', 'number_of_services');
         if ($filearea === 'backgroundimage') { 
             return $theme->setting_file_serve('backgroundimage', $args, $forcedownload, $options); 
         }
-         $number_of_services = get_config('theme_wandernurse', 'number_of_services');
         if($number_of_services > 0) {
             for ($i = 1; $i <= $number_of_services; $i++) {
                 if ($filearea === "service_image_$i") { 
@@ -61,21 +61,21 @@ function theme_wandernurse_pluginfile($course, $cm, $context, $filearea, $args, 
     }
 }
 
-// function theme_wandernurse_get_extra_scss($theme) {
-//     $content = '';
+function theme_wandernurse_get_extra_scss($theme) {
+    $content = '';
 
-//     // Fetch the brand color from the theme settings.
-//     $brandcolor = get_config('theme_wandernurse', 'brandcolor'); // Use the correct theme name.
+    // Fetch the brand color from the theme settings.
+    $brandcolor = get_config('theme_wandernurse', 'primarycolor'); // Use the correct theme name.
 
-//     // If brand color exists, add it to SCSS.
-//     if (!empty($brandcolor)) {
-//         $content .= '$primarycolor: ' . $brandcolor . ';';
-//     }
+    // If brand color exists, add it to SCSS.
+    if (!empty($brandcolor)) {
+        $content .= '$primary: ' . $brandcolor . ';';
+    }
 
-//     // If there are additional SCSS settings, append them.
-//     // if (!empty($theme->settings->scss)) {
-//     //     $content .= "\n" . $theme->settings->scss;
-//     // }
+    // If there are additional SCSS settings, append them.
+    if (!empty($theme->settings->scss)) {
+        $content .= "\n" . $theme->settings->scss;
+    }
 
-//     return $content;
-// }
+    return $content;
+}

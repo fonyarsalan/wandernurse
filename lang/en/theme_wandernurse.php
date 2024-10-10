@@ -203,6 +203,5 @@ $string['subscriptiondescription'] = 'Subscription Section Description';
 $string['subscriptiondescriptiondesc'] = 'Enter the description for the Subscription section.';
 
 
-$string['brandcolor'] = 'Brand Color';
-$string['brandcolordesc'] = 'Select the brand color for your theme.';
-$string['thisisaccahnge'] = 'change';
+$string['primarycolor'] = 'Brand Color';
+$string['primarycolor_desc'] = 'Select the primary color for your theme.';

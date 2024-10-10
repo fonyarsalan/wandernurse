@@ -8,10 +8,6 @@ defined('MOODLE_INTERNAL') || die();
 // This is used for performance, we don't need to know about these settings on every page in Moodle, only when
 // we are looking at the admin settings pages.
 if ($ADMIN->fulltree) {
-<<<<<<< HEAD
-    
-}
-=======
 
     // Boost provides a nice setting page which splits settings onto separate tabs. We want to use it here.
     $settings = new theme_boost_admin_settingspage_tabs('themesettingwandernurse', get_string('configtitle', 'theme_wandernurse'));
@@ -631,8 +627,13 @@ if ($enablesubscription) {
 $setting = new admin_setting_heading('color', 'THEME COLOR', '<hr>');
 $page->add($setting);
 
-// Brand Color Setting.
-
+// Theme Color Setting.
+$name = 'theme_wandernurse/primarycolor';
+$title = get_string('primarycolor', 'theme_wandernurse');
+$description = get_string('primarycolor_desc', 'theme_wandernurse');
+$setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+$setting->set_updatedcallback('theme_reset_all_caches');
+$page->add($setting);
 
 
 
@@ -644,4 +645,3 @@ $page->add($setting);
     $settings->add($page);
 
 }
->>>>>>> 576d7ca (MY COMMIT)

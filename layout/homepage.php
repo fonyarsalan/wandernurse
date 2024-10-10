@@ -17,8 +17,8 @@
 /**
  * A drawer based layout for the boost theme.
  *
- * @package   theme_wandernurse
- * @copyright 2024 Muhammad Arsalan
+ * @package   theme_boost
+ * @copyright 2021 Bas Brands
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -73,6 +73,7 @@ if ($PAGE->has_secondary_navigation()) {
         $overflow = $overflowdata->export_for_template($OUTPUT);
     }
 }
+
 
 $primary = new core\navigation\output\primary($PAGE);
 $renderer = $PAGE->get_renderer('core');
@@ -142,10 +143,10 @@ $services = [];
         for ($i = 1; $i <= $number_of_services; $i++) {
             $services['items'][] =
           [ 
-            'title' => get_config('theme_wandernurse', "servicestitle_$i"),
-            'description'=> get_config('theme_wandernurse', "servicesdescription_$i"),
-            'image' => $PAGE->theme->setting_file_url("service_image_$i", "service_image_$i"),
-           ];
+           'title' => get_config('theme_wandernurse', "servicestitle_$i"),
+           'description'=> get_config('theme_wandernurse', "servicesdescription_$i"),
+           'image' => $PAGE->theme->setting_file_url("service_image_$i", "service_image_$i"), 
+          ];
         }
     }
 
@@ -211,7 +212,6 @@ $templatecontext = [
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     'overflow' => $overflow,
-    'headercontent' => $headercontent,
     'addblockbutton' => $addblockbutton
 ];
 
