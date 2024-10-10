@@ -627,8 +627,13 @@ if ($enablesubscription) {
 $setting = new admin_setting_heading('color', 'THEME COLOR', '<hr>');
 $page->add($setting);
 
-// Brand Color Setting.
-
+// Theme Color Setting.
+$name = 'theme_wandernurse/primarycolor';
+$title = get_string('primarycolor', 'theme_wandernurse');
+$description = get_string('primarycolor_desc', 'theme_wandernurse');
+$setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+$setting->set_updatedcallback('theme_reset_all_caches');
+$page->add($setting);
 
 
 

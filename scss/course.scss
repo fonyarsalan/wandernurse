@@ -1,0 +1,113 @@
+.dashboard-card .dashboard-card-img {
+    padding: .5rem;
+    position: relative;
+    height: 10rem !important;
+    background-position: center;
+    background-size: cover;
+   }
+
+.pagelayout-coursecategory .dashboard-card {
+  position: relative;
+  width: calc(33.33% - .8rem) !important;
+  max-width: calc(33.33% - .8rem) !important;
+  margin: 1rem;
+}
+
+.dashboard-card {
+  border: 1px solid #e9ecef;
+}
+
+.pagelayout-coursecategory .dashboard-card .card-body {
+  padding: .8rem;
+}
+
+.pagelayout-coursecategory .dashboard-card .course-contacts .contact {
+  display: flex;
+}
+.pagelayout-coursecategory .dashboard-card .course-contacts .contact img {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #dee2e6;
+}
+.dashboard-card .dashboard-card-img .course-category {
+  background-color: #0f47ad;
+  color: #fff;
+  padding: 4px 6px;
+  margin-bottom: .25rem;
+  border-radius: .5rem;
+  width: fit-content;
+  font-size: 80%;
+}
+.pagelayout-coursecategory .dashboard-card .course-contacts .contact p {
+  margin-left: .4rem;
+  margin-bottom: 0;
+}
+.pagelayout-coursecategory .dashboard-card .course-contacts .contact p.role {
+  color: #1d2125;
+  font-size: 80%;
+}
+.pagelayout-coursecategory .dashboard-card .course-contacts .contact p {
+  margin-left: .4rem;
+  margin-bottom: 0;
+}
+.pagelayout-coursecategory .dashboard-card .course-contacts {
+  padding: 0 .8rem .8rem .8rem;
+}
+
+
+.course-info-container .coursename {
+  color: blue; /* Change link color to blue */
+}
+
+.course-info-container .coursename:hover {
+  color: darkblue; /* Optional: Change hover color */
+}
+.course_category_tree .courses{
+  display: flex;
+}
+
+
+@media (max-width: 991.98px) {
+  .pagelayout-coursecategory .dashboard-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1rem 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  #page-site-index.notloggedin .footer-content-popover .footer-section {
+    text-align: center;
+  }
+  #page-site-index.notloggedin .column-right .footer-title {
+    display: none;
+  }
+  .course_category_tree .courses{
+    flex-wrap: wrap;
+  }
+  .course_category_tree .category>.content {
+    padding-left: 0 !important;
+}
+}
+
+
+@media (max-width: 767.98px) {
+  .pagelayout-mypublic .col-md-4,
+  .pagelayout-mypublic .col-md-8 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .pagelayout-mypublic .col-md-4 {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #page-enrol-index #region-main .generalbox {
+    width: 100% !important;
+    float: none !important;
+    margin: 0.5rem 0 0.5rem 0 !important;
+  }
+  #page-enrol-index #region-main .generalbox:first-of-type {
+    padding: 0 !important;
+  }
+}

@@ -60,7 +60,7 @@ if (!$courseindex) {
 }
 
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
-$forceblockdraweropen = $OUTPUT->firstview_fakeblocks();
+// $forceblockdraweropen = $OUTPUT->firstview_fakeblocks();
 
 $secondarynavigation = false;
 $overflow = '';
@@ -143,10 +143,10 @@ $services = [];
         for ($i = 1; $i <= $number_of_services; $i++) {
             $services['items'][] =
           [ 
-             'title' => get_config('theme_wandernurse', "servicestitle_$i"),
+           'title' => get_config('theme_wandernurse', "servicestitle_$i"),
            'description'=> get_config('theme_wandernurse', "servicesdescription_$i"),
-           'image' => $PAGE->theme->setting_file_url("service_image_$i", "service_image_$i"),
-                   ];
+           'image' => $PAGE->theme->setting_file_url("service_image_$i", "service_image_$i"), 
+          ];
         }
     }
 
@@ -208,7 +208,7 @@ $templatecontext = [
     'mobileprimarynav' => $primarymenu['mobileprimarynav'],
     'usermenu' => $primarymenu['user'],
     'langmenu' => $primarymenu['lang'],
-    'forceblockdraweropen' => $forceblockdraweropen,
+    // 'forceblockdraweropen' => $forceblockdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
     'overflow' => $overflow,

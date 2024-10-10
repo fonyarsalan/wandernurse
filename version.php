@@ -5,7 +5,7 @@
 defined('MOODLE_INTERNAL') || die();                                                                                                
                                                                                                                                     
 // This is the version of the plugin.                                                                                               
-$plugin->version = '2016102107';                                                                                                    
+$plugin->version = '2024100105';                                                                                                    
                                                                                                                                     
 // This is the version of Moodle this plugin requires.                                                                              
 $plugin->requires = '2024042202';                                                                                                   
@@ -16,5 +16,5 @@ $plugin->component = 'theme_wandernurse';
                                                                                                                                     
 // This is a list of plugins, this plugin depends on (and their versions).                                                          
 $plugin->dependencies = [                                                                                                           
-    'theme_boost' => '2016102100'                                                                                                   
+    'theme_boost' => '2024042200'                                                                                                   
 ];

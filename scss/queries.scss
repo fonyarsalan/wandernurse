@@ -1,0 +1,90 @@
+@media (max-width: 750px) {
+    .flex{
+        display: block !important;
+    }
+    .map{
+        height: 500px;
+    }
+    .footer-content{
+        display: block !important;
+    }
+    .email p {
+        text-align: center !important;
+        font-size: 1.2rem;
+        align-self: center !important;
+    }
+    .cta-content h1{
+        font-size: 250%;
+    }
+    #cta{
+        min-height: 4% !important;
+    }
+    .healthcare{
+        font-size: calc(410% - 100%) !important;
+    }
+    .elevate{
+        font-size: calc(320% - 100%) !important;
+    }
+    .hero-desc{
+        font-size: smaller;
+    }
+
+    .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; 
+    }
+    .features-flex{
+        grid-auto-flow: row !important;
+    }
+}
+
+@media (max-width: 500px){
+    .email{
+        flex-direction: column;
+        align-items: center !important;
+        gap: 5px;;
+    }
+    .cta-content{
+        margin-bottom: 50%;
+    }
+    .hero-buttons{
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 300px){
+        .cta-content{
+            margin-bottom: 70%;
+        }
+    }
+    @media (max-width: 920px) {
+    .whyus-flex{
+        flex-direction: column !important;
+    }
+    #whyus{
+        padding: 0px !important; 
+    }
+}
+
+@media screen and (min-width:576px){
+    .mycontainer{     
+        .carousel-inner{
+        display: flex;
+    }
+    .carousel-item{
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100%/3);
+    }}
+ 
+}
+
+@media (min-width: 768px){
+    .pagelayout-standard #page.drawers .main-inner, body.limitedwidth #page.drawers .main-inner{
+        max-width: 1000px !important;
+    }
+}

@@ -1,38 +1,39 @@
 @media (min-width: 576px) {
-    #page-wrapper #page {
-        display: block !important;
-        flex-direction: column;
-        padding: 0;
-    }
-  }
+#page-wrapper #page {
+  display: block !important;
+  flex-direction: column;
+  padding: 0;
+}
+}
   
   
   
   
   
   .mycontainer{
-    padding: 0 20px;
+  padding:20px;
   }
   .main-logo{
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
   }
+
   
   
-  
-  .navbar_my {
-    top: 26px;
-    max-width: 85%;
-    margin-top: 30px;
-    margin-bottom: 0px;
-    background: transparent;
-    height: auto;
-    color: #fff;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.navbar_my {
+  top: 26px;
+  display: none !important;
+  max-width: 85%;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  background: transparent;
+  height: auto;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
   body {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
@@ -89,6 +90,7 @@
   }
   .title {
     margin-top: 150px;
+    margin-bottom:20px;
   }
   #hero {
     position: absolute;
@@ -99,14 +101,12 @@
   
   }
   .elevate {
-    font-size: 66px;
+    font-size: 350%;
     text-transform: uppercase;
     margin: 0 auto;
     text-align: center;
     font-weight: 400;
     margin-bottom: 0px;
-    margin-bottom: -50px;
-  
     color:white;
   }
   .hero-content {
@@ -116,8 +116,9 @@
     letter-spacing: 1px;
   }
   .healthcare {
-    font-size: 80px;
+    font-size: 410%;
     text-align: center;
+    line-height: 45px;
     font-weight: 400;
     text-transform: uppercase;
   }
@@ -145,22 +146,9 @@
   .join {
     background-color: white;
   }
-  .job {
+  .job-button {
     color: white;
   }  
-  //////background image
-  // #page-wrapper {
-  //   background-image: linear-gradient(
-  //     180deg,
-  //     $primary -1.99%,
-  //     rgba(163, 38, 144, 0) 101.62%
-  //   ),
-  //   url("/moodle/theme/wandernurse/pix/image.png");
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // }
-  
   //////////////FEATURES
   ///
   #features {
@@ -189,7 +177,10 @@
   }
   .features-flex {
     margin-top: 50px;
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    // flex-wrap: wrap;
     gap: 40px;
   }
   .feature {
@@ -201,11 +192,10 @@
     flex-direction: column;
     text-align: center;
     background-color: #dad7d7e0;
-    width: 33.333333%;
     border-radius: 25px;
   }
   .feature-title {
-    color: 4primary;
+    color: $primary;
     font-size: 20px;
     font-weight: 600;
   }
@@ -218,11 +208,10 @@
   
   //////ABOUT
   ///
-  #about {
-        
-        background-color: $primary;
-        padding: 50px 20px;
-        color: #fff;
+#about {
+  background-color: $primary;
+  padding: 50px 20px;
+  color: #fff;
   }
   .sub-heading {
     text-transform: uppercase;
@@ -250,6 +239,8 @@
     margin-bottom: 20px;
     color: #0f0e0e;
     padding: 20px;
+    height: 144px;
+    overflow: auto !important;
   }
   
   .service-name {
@@ -257,6 +248,7 @@
     color: $primary ;
     font-size: 1.1rem;
     margin-top: 20px;
+    text-align:center;
   }
   
   .testimonial-role {
@@ -278,11 +270,11 @@
   .carousel-indicators .active {
     background-color: $primary ; /* Active dot color */
   }
-  .carousel-inner {
-    max-width: 80%;
-    margin: 0 auto;
-    overflow: visible;
-  }
+  // .carousel-inner {
+  //   max-width: 80%;
+  //   margin: 0 auto;
+  //   overflow: visible;
+  // }
   .testii {
     background-color: #dad7d7e0;
     border-radius: 25px;
@@ -302,25 +294,44 @@
   }
   
   .services-button {
-    margin: 100px 0;
-    text-transform: capitalize;
-    color: $primary ;
-    padding: 10px 30px;
-    font-size: larger;
-    border: 2px $primary  solid;
-    border-radius: 5px;
+  margin: 50px 0;
+  text-transform: capitalize;
+  color: $primary ;
+  padding: 10px 30px;
+  font-size: larger;
+  border: 2px $primary  solid;
+  border-radius: 5px;
   }
   .services-button:hover {
-    background-color: $primary ;
-    color: white;
+  background-color: $primary ;
+  color: white;
   }
   .flex-button {
-    display: flex;
-    margin-top: 32px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
-  
+
+  #services{
+    .mycontainer{
+      .card-wrapper{
+        margin: 0 70px !important;
+      }
+      .swiper-button-prev{
+        margin-right: 10px !important;
+      }
+      .swiper-button-next{
+        margin-left: 10px !important;
+      }
+    }
+  }
+
+
+
+
+
+
+
   // WHY_US
   #whyus {
     background-image: linear-gradient(to top right, #c13584 -10.99%, rgba(163, 38, 144, 0) 25.62%), linear-gradient(to bottom left, #c13584 -10.99%, rgba(163, 38, 144, 0) 30.62%);
@@ -441,6 +452,11 @@
       grid-template-columns: 1fr;
     }
   }
+  #ourprograms{
+    .flex-button{
+      margin-top: 20px;
+    }
+  }
   
   // TESTIMONIALS
   
@@ -550,21 +566,28 @@
     text-transform: uppercase;
     position:relative;
   }
-  
-  .career-testimonial div{
-    padding: 50px;
+  .job{
+      padding: 50px;
+      text-align: center;
+    p{
+      word-spacing: 5px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      color:black;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    span{
+      color:$primary ;
+      font-size: 22px;
+      font-weight: 300;
+    }
   }
-  .career-testimonial p{
-    word-spacing: 5px;
-    margin-bottom: 10px;
-    color:black;
-    font-size: 18px;
+#careers{
+  .testimonial-container{
+    height: 180px;
   }
-  .career-testimonial span{
-    color:$primary ;
-    font-size: 22px;
-    font-weight: 300;
-  }
+}
   .row-career{
     gap:0px;
   }
@@ -573,7 +596,7 @@
     color:white;
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 40%;
     padding: 5px 20px;
   }
   .tag span{
@@ -585,8 +608,8 @@
   /// 
   /// 
   #resources{
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-top: 80px;
+    margin-bottom: 80px;
   }
   .resources-img{
     max-width: 1400px;
@@ -594,6 +617,7 @@
   .resources-content{
     margin-top:50px;
     color: black;
+    margin-left: 30px;
   }
   .resources-content h2{
     word-spacing: 8px;
@@ -614,7 +638,7 @@
     padding:10px;
   }
   #blogpost{
-    margin-top: 400px;
+    margin-top: 20px;
   }
   ///////////////////////CONTACTS
   /// 
@@ -651,6 +675,14 @@
     color:white;
     font-weight: 400;
   }
+
+  #blogpost{
+    .mycontainer{
+      .card-wrapper{
+        margin: 0 auto !important;
+      }
+    }
+  }
   
   .flex{
     display: grid;
@@ -673,12 +705,14 @@
     /* background-position: center; */
     /* background-repeat: no-repeat; */
     position: relative;
-    padding: 240px;
+    padding: 10% ;
+    min-height: 8%;
+    background-repeat: no-repeat;
     color: #fff;
   }
   .cta-content h1{
     text-transform: uppercase;
-    font-size: 68px;
+    font-size: 300%;
     word-spacing: 10px;
     margin-top: 50px;
     font-weight: 400;
@@ -707,7 +741,7 @@
   .email p{
     color: #fff;
     text-transform: capitalize;
-    font-size: 31px;
+    font-size: 1.9rem;
     font-weight: 500;
     margin: 0;
     align-self: end;
@@ -778,15 +812,15 @@
     margin: 0 auto;
   }
   
-  .row {
-    gap: 20px;
-    flex-wrap: nowrap !important;
-    align-items: center;
-    justify-content: center;
-  }
+  // .row {
+  //   gap: 20px;
+  //   // flex-wrap: nowrap !important;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
   .carousel-inner-my{
   width: 100% !important;
-  
+
   margin: 0 auto;
   overflow: visible !important;
   }
@@ -807,3 +841,45 @@ color:white;
   width: 70%;
   flex-grow: 1;
 }
+
+// FOR CAROUSELS
+#page-site-index .carousel-inner{
+  padding: 1em;
+}
+#page-site-index .form-control{
+  border: none !important;
+}
+.mycontainer{
+  .card{
+    border-radius: 15px;
+    margin: 0 .5em;
+    box-shadow: 2px 6px 8px 0 #383737;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: fit-content !important ;
+    height: fit-content !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  .carousel-indicators li{
+    background-color: #c13584 !important;
+    border-radius: 50%;
+  }
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    background-color: grey !important;
+    border-radius: 50% !important;
+  }
+
+}
+
+
+
+@import "slider";
+@import "queries";
+@import "course";
+
+
+
+
